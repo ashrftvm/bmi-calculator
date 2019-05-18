@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class CardIcon extends StatelessWidget {
-  CardIcon({this.icon, this.label});
+  CardIcon({this.icon, this.color, this.label});
 
   final IconData icon;
+  final Color color;
   final String label;
 
   @override
@@ -13,6 +15,7 @@ class CardIcon extends StatelessWidget {
       children: <Widget>[
         Icon(
           icon,
+          color: color,
           size: 80.0,
         ),
         SizedBox(
@@ -20,7 +23,7 @@ class CardIcon extends StatelessWidget {
         ),
         Text(
           label,
-          style: TextStyle(fontSize: 24.0),
+          style: kLabelTextStyle,
         ),
       ],
     );
